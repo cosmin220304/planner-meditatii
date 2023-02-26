@@ -1,0 +1,10 @@
+File based routing
+
+Note: all pages used here are automatically mapped in main.tsx using React Pages Vite plugin:
+https://github.com/hannoeru/vite-plugin-pages/blob/main/README.md
+
+/pages
+  index.ts              -> "/" route
+  items/index.ts        -> "/items" route
+  items/[id].ts         -> "/items/:id" route (*dynamic route)
+  items/create/index.ts -> "/items/create" route

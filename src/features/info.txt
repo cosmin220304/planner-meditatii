@@ -1,0 +1,13 @@
+Bigger components used in pages (replica of src folder)
+Structure:
+--------------
+/features
+  /component1
+    /components
+    /hooks
+    index.js
+  /component2
+    /components
+    /hooks
+    index.js
+--------------

@@ -1,18 +1,27 @@
-import { Avatar, Button, Navbar } from "flowbite-react";
+import { Avatar, Navbar } from "flowbite-react";
 import LogoSmall from "../assets/LogoWhiteSmall.svg";
 import StudentAvatar from "../assets/StudentAvatar.svg";
 import ProfessorAvatar from "../assets/ProfessorAvatar.svg";
 import { useState } from "react";
 import { CATEGORIES } from "../utils/TopnavConstants";
+import { useLocation } from "react-router";
+import { Link } from "react-router-dom";
 
 function Topnav() {
+  const { search, pathname } = useLocation();
   const [toggle, setToggle] = useState(false);
+  const queryParams = new URLSearchParams(search);
+  const targetCategory = queryParams.get("category") || CATEGORIES[0];
+
+  function isTargetCategory(category: string) {
+    return category === targetCategory;
+  }
 
   return (
     <div className="text-white [&>*]:bg-blue-500">
       {/* Upper part with logo and profile buttons */}
       <Navbar fluid>
-        <Navbar.Brand>
+        <Navbar.Brand href="/">
           <img src={LogoSmall} className="w-12" alt="Planner Logo" />
         </Navbar.Brand>
 
@@ -22,12 +31,12 @@ function Topnav() {
         </div>
 
         <Navbar.Collapse>
-          <div>
+          <div className="cursor-pointer">
             <Avatar img={StudentAvatar} size="sm" rounded />
             <div className="text-center text-xs font-semibold">Become Student</div>
           </div>
 
-          <div>
+          <div className="cursor-pointer">
             <Avatar img={ProfessorAvatar} size="sm" rounded />
             <div className="text-center text-xs font-semibold">Become Professor</div>
           </div>
@@ -41,7 +50,13 @@ function Topnav() {
         } flex-col justify-between md:flex-row md:flex`}
       >
         {CATEGORIES.map((category) => (
-          <div key={category}>{category}</div>
+          <Link
+            className={`${isTargetCategory(category) ? "underline" : ""}`}
+            key={category}
+            to={`${pathname}?category=${category}`}
+          >
+            {category}
+          </Link>
         ))}
       </div>
     </div>

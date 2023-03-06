@@ -1,4 +1,4 @@
-import Topnav from "../components/Topnav";
+import Topnav from "@features/topnav";
 
 function Home() {
   return (

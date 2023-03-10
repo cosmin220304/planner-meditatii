@@ -1,8 +1,12 @@
+import ExploreSection from "../components/ExploreSection/ExploreSection";
 import HeroSection from "../components/HeroSection/HeroSection";
 
 function Home() {
   return (
-    <HeroSection/>
+    <div>
+      <HeroSection/>
+      <ExploreSection/>
+    </div>
   )
 }
 

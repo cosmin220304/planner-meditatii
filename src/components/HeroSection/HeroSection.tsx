@@ -11,7 +11,7 @@ function HeroSection() {
                 <SearchBar/>
             </section>
             <section className="relative m-auto w-full h-fit">
-                <img className="m-auto w-72 h-fit"src={logo}></img>
+                <img className="drop-shadow-xl m-auto w-86 h-fit"src={logo}></img>
             </section>
         </div>
     )

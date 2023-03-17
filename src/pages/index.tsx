@@ -1,3 +1,4 @@
+import { Carousel } from "flowbite";
 import ExploreSection from "../components/ExploreSection/ExploreSection";
 import HeroSection from "../components/HeroSection/HeroSection";
 

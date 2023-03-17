@@ -1,17 +1,35 @@
-import React from "react";
+import { Carousel, Rating } from "flowbite-react";
+import React, {useState} from "react";
+import {BsStarFill, BsStarHalf, BsStar} from 'react-icons/bs'
 
 export default function ProfCard(props:any) {
+    const stars = [];
+
+    for(let i = 0; i < props.rating; i++)
+    {
+        stars.push(<Rating.Star />);
+    }
+
+    for(let i = props.rating; i < 5; i++)
+    {
+        stars.push(<Rating.Star filled={false}/>)
+    }
+
     return (
-        <section className="p-8 mb-40 ml-40 md:mb-0 md:ml-0">
-            <div className="cursor-pointer">
-                <img className="h-40 w-56 rounded-t-3xl bg-slate-500"/> 
-                <div className="relative top-full w-56 h-20 rounded-b-3xl bg-sky-500 z-1">
-                        <section className="relative text-center top-2">
+        <div className="drop-shadow-xl w-fit h-fit pl-4 pr-4 md:mb-0 md:ml-0">
+            <div className="m-auto justify-center cursor-pointer">
+                <img src={props.url} className="h-40 w-56 rounded-t-3xl bg-slate-500"/> 
+                <div className="relative w-full h-fit pt-4 pb-4 rounded-b-3xl bg-sky-500 z-1">
+                        <div className="relative text-center">
                             <h1 className="font-bold text-white">{props.name}</h1>
                             <h3 className="text-white">{props.profession}</h3>      
-                        </section>
+                        </div>
                 </div>
             </div>
-        </section>
+
+            <div className="h-fit w-full p-2">
+                <Rating size="md" className="justify-center pt-3">{stars}</Rating>
+            </div>
+        </div>
     )
 }

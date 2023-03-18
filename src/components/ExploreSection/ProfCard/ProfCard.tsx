@@ -1,6 +1,5 @@
-import { Carousel, Rating } from "flowbite-react";
-import React, {useState} from "react";
-import {BsStarFill, BsStarHalf, BsStar} from 'react-icons/bs'
+import { Rating } from "flowbite-react";
+import React from "react";
 
 export default function ProfCard(props:any) {
     const stars = [];

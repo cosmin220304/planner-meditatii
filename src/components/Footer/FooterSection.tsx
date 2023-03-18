@@ -7,6 +7,7 @@ import whiteLogo from "G:/MeditatiiApp/planner-meditatii/src/assets/images/white
 export default function FooterSection()
 {
     return (
+        
         <section className='grid p-12 mt-2 md:grid-cols-2 grid-flow-col md:grid-rows-2 h-fit w-full bg-sky-500'>
             <div className='relative flex w-fit row-span-3 md:row-span-2'>
                 <img src={whiteLogo} className="mt-auto mb-auto h-20"></img>

@@ -1,5 +1,6 @@
 import { Carousel } from "flowbite";
 import ExploreSection from "../components/ExploreSection/ExploreSection";
+import FooterSection from "../components/Footer/FooterSection";
 import HeroSection from "../components/HeroSection/HeroSection";
 
 function Home() {
@@ -7,6 +8,7 @@ function Home() {
     <div>
       <HeroSection/>
       <ExploreSection/>
+      <FooterSection/>
     </div>
   )
 }

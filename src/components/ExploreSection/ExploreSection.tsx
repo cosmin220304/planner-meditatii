@@ -4,8 +4,6 @@ import React from "react";
 import ProfCard from "../ProfCard/ProfCard";
 import activeProfs from 'G:/MeditatiiApp/planner-meditatii/src/services/active-proffesors.json';
 import { BsArrow90DegRight, BsFillArrowRightCircleFill } from "react-icons/bs";
-import NextPrevButton from "../NextPrevButton/NextPrevButton";
-
 
 export default function ExploreSection() 
 {

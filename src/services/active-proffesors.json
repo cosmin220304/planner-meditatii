@@ -1,5 +1,4 @@
-{
-    "page1" : [
+ [
         {
             "id" : 1,
             "name": "name1",
@@ -27,9 +26,7 @@
             "proffesion": "category4",
             "rating": 5,
             "url": "https://media.istockphoto.com/id/1017296544/photo/testing-software.jpg?s=612x612&w=0&k=20&c=9K02VDBeVtaLCThLojKphZpZ6x8o7DUi3UQ4r1tTmQU="
-        }
-    ],
-    "page2": [
+        },
         {
             "id" : 5,
             "name": "name5",
@@ -58,5 +55,5 @@
             "rating": 3,
             "url": "https://media.istockphoto.com/id/1017296544/photo/testing-software.jpg?s=612x612&w=0&k=20&c=9K02VDBeVtaLCThLojKphZpZ6x8o7DUi3UQ4r1tTmQU="
         }
-    ]
-}
+        
+]

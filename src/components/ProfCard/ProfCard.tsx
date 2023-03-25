@@ -1,6 +1,8 @@
 import { Rating } from "flowbite-react";
 import React from "react";
 
+const handleDragStart = (e: { preventDefault: () => any; }) => e.preventDefault();
+
 export default function ProfCard(props:any) {
     const stars = [];
 
@@ -15,7 +17,7 @@ export default function ProfCard(props:any) {
     }
 
     return (
-        <div className="drop-shadow-xl w-fit h-fit pl-4 pr-4 md:mb-0 md:ml-0">
+        <div onDragStart={handleDragStart} className="drop-shadow-xl w-fit h-fit pl-4 pr-4 md:mb-0 md:ml-0" role="presentation">
             <div className="m-auto justify-center cursor-pointer">
                 <img src={props.url} className="h-40 w-56 rounded-t-3xl bg-slate-500"/> 
                 <div className="relative w-full h-fit pt-4 pb-4 rounded-b-3xl bg-sky-500 z-1">

@@ -1,5 +1,12 @@
+import Topnav from "@features/topnav";
+
 function Home() {
-  return <div>Home page</div>;
+  return (
+    <div>
+      <Topnav />
+      Home page
+    </div>
+  );
 }
 
 export default Home;

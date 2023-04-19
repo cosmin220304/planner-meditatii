@@ -1,16 +1,19 @@
-import { Carousel } from "flowbite";
-import ExploreSection from "../components/ExploreSection/ExploreSection";
-import FooterSection from "../components/Footer/FooterSection";
-import HeroSection from "../components/HeroSection/HeroSection";
+import { BrowserRouter as Router,Routes, Route} from 'react-router-dom';
+import Home from "./Home/index"
+import SignUp from './Sign-up';
 
-function Home() {
-  return (
-    <div>
-      <HeroSection/>
-      <ExploreSection/>
-      <FooterSection/>
-    </div>
-  )
+export default function App()
+{
+    return (
+        <Router>
+            <Routes>
+                <Route path='/home'>
+                    <Home></Home>
+                </Route>
+                <Route path='/sign-up'>
+                    <SignUp></SignUp>
+                </Route>
+            </Routes>
+        </Router>
+        );
 }
-
-export default Home;

@@ -1,9 +1,8 @@
 import AliceCarousel from "react-alice-carousel";
 import 'react-alice-carousel/lib/alice-carousel.css';
-import React from "react";
 import ProfCard from "../ProfCard/ProfCard";
 import activeProfs from 'G:/MeditatiiApp/planner-meditatii/src/services/active-proffesors.json';
-import { BsArrow90DegRight, BsFillArrowRightCircleFill } from "react-icons/bs";
+import Button from "../Button";
 
 export default function ExploreSection() 
 {
@@ -34,9 +33,9 @@ export default function ExploreSection()
                         <ProfCard key={prof.id} rating={prof.rating} name={prof.name} profession={prof.proffesion} url={prof.url}/>
                         )}/>
                 </div>
-            <div className="flex relative justify-center pt-8">
-                <button className="relative h-fit w-40 p-3 rounded-3xl bg-sky-500 text-center font-bold text-white">Explore more</button>
-            </div>
+                <div className="flex relative justify-center pt-8">
+                    <Button name="Explore"></Button>
+                </div>
         </section>
     )
 }   

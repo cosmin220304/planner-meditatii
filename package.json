@@ -18,9 +18,7 @@
     "react-icons": "^4.8.0",
     "react-router": "^6.8.2",
     "react-router-dom": "^6.8.2",
-    "react-social-icons": "^5.15.0",
-    "state-pool": "^0.9.0",
-    "swiper": "^6.8.4"
+    "react-social-icons": "^5.15.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",

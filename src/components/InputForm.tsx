@@ -2,11 +2,11 @@
 export default function InputForm(props:any)
 {
     return (
-        <div>
+        <form className="flex mb-6 justify-center">
             <input type={props.type} 
-            className="h-fit mb-6 w-full pl-5 py-3 
+            className="h-fit p-3 pl-8 pr-48 
             border-none rounded-2xl bg-slate-100 
             text-left text-black" placeholder={props.placeholder}></input>    
-        </div>
+        </form>
     )
 }

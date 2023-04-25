@@ -4,7 +4,7 @@ import HeroSection from "../../components/HeroSection/HeroSection";
 
 function Home() {
   return (
-    <div className="h-screen w-full">
+    <div>
       <HeroSection/>
       <ExploreSection/>
       <FooterSection/>

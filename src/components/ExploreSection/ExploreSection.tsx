@@ -7,7 +7,7 @@ import Button from "../Button";
 export default function ExploreSection() 
 {
     return (
-        <section className="realtive h-fit pb-20">
+        <section className="realtive h-fit pb-20 my-20">
             <h1 className="text-sky-500 font-bold pb-14 text-4xl pl-10 p-5 md:pl-32 m-auto justify-center md:m-0">Explore active proffesors</h1>
                 <div className="m-auto justify-center relative">
                     <AliceCarousel disableDotsControls={true} disableButtonsControls={true} autoPlay={true} infinite={true} autoPlayInterval={1200}  controlsStrategy="responsive" paddingLeft={100} responsive={

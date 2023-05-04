@@ -1,8 +1,6 @@
-import { Footer } from 'flowbite-react'
-import React from 'react'
-import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from 'react-icons/bs'
 import { SocialIcon } from 'react-social-icons'
-import whiteLogo from "G:/MeditatiiApp/planner-meditatii/src/assets/images/white-logo.svg"
+import whiteLogo from "G:/MeditatiiApp/planner-meditatii/src/assets/svg/white-logo.svg"
+import SignUp from '../../pages/Sign-up'
 
 export default function FooterSection()
 {
@@ -13,7 +11,6 @@ export default function FooterSection()
                 <img src={whiteLogo} className="mt-auto mb-auto h-20"></img>
                 <h1 className='p-3 mt-auto mb-auto font-bold text-white text-2xl'>Junior Coders</h1>
             </div>
-
             <div className='grid grid-cols-2 grid-rows-2 md:grid-cols-3 md:grid-rows-1 grid-flow-col gap-10 md:gap-32 m-auto'>
                 <div>
                     <h1 className='font-bold text-xl text-white'>About</h1>

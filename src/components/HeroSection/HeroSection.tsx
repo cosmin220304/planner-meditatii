@@ -1,6 +1,6 @@
 import React from "react";
 import SearchBar from "./SearchBar";
-import logo from "G:/MeditatiiApp/planner-meditatii/src/assets/images/logo.svg";
+import logo from "G:/MeditatiiApp/planner-meditatii/src/assets/svg/logo.svg";
 
 function HeroSection() {
     return (

@@ -1,16 +1,29 @@
 import { useState } from "react";
 import studentAvatar from "G:/MeditatiiApp/planner-meditatii/src/assets/svg/StudentAvatar.svg"
 import professorAvatar from "G:/MeditatiiApp/planner-meditatii/src/assets/svg/ProfessorAvatar.svg"
+import { createGlobalState } from "react-hooks-global-state";
+
+const initialState = {type:true};
+export const {useGlobalState} = createGlobalState(initialState)
 
 const ImgAnimation = () => {
     const [professor, setProfessorStatus] = useState(true);
     const [student, setStudentStatus] = useState(false);
-    const [type,setType] = useState("Become professor");
+    //const [type,setType] = useState("Become professor");
+    
+    const [type, setType] = useGlobalState('type');
+
+    const changeType = () => {
+        setType(type => !type);
+    }
+
+    const renderText = type ? "Become professor" : "Become student"
+
     return (
         <section>
             {/*Type of the account*/}
-            <div className="w-full lg:mt-20 lg:mb-20 mt-10">
-                <h1 className="text-center text-white font-bold text-2xl">{type}</h1>
+            <div className="relative w-full h-fit lg:mt-20 lg:mb-20 mt-10 m-auto justify-center">
+                <h1 className="text-center text-white font-bold text-2xl">{renderText}</h1>
             </div>
             {/*Container section for the images*/}
             <div className="h-full w-full m-auto">
@@ -25,7 +38,7 @@ const ImgAnimation = () => {
                             onMouseDown={()=>{
                             setProfessorStatus(true)
                             setStudentStatus(false)
-                            setType("Become Professor")
+                            changeType()
                         }
                         }
                         src={professorAvatar}/>
@@ -38,7 +51,7 @@ const ImgAnimation = () => {
                         onMouseDown={()=>{
                             setStudentStatus(true)
                             setProfessorStatus(false)
-                            setType("Become Student")
+                            changeType()
                         }}
                         src={studentAvatar}/>
                 </div>

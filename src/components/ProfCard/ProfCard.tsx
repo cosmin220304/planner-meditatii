@@ -1,10 +1,10 @@
-//import { Rating } from "flowbite-react";
+import { Rating } from "flowbite-react";
 import React from "react";
 
 const handleDragStart = (e: { preventDefault: () => any; }) => e.preventDefault();
 
 export default function ProfCard(props:any) {
-   /* const stars = [];
+    const stars = [];
 
     for(let i = 0; i < props.rating; i++)
     {
@@ -32,10 +32,5 @@ export default function ProfCard(props:any) {
                 <Rating size="md" className="justify-center pt-3">{stars}</Rating>
             </div>
         </div>
-    
-        )
-        */
-       return (
-        <div></div>
-       )
-    }
+    )
+}

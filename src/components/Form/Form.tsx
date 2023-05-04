@@ -2,9 +2,12 @@ import Button from "../Button"
 import logo from "G:/MeditatiiApp/planner-meditatii/src/assets/svg/logo.svg"
 import InputForm from "../InputForm"
 import { SocialIcon } from "react-social-icons"
+import { useGlobalState } from "../../features/ChangeUserType"
 
-export default function Form(props:any)
+export default function Form()
 {
+    const [type] = useGlobalState("type");
+    const renderText = type ? "Become professor" : "Become student"
     return (          
         <section className="w-fit lg:h-screen h-fit lg:pb-0 pb-16 pt-16 m-auto"> {/**Form Container */}
             {/*Logo*/}
@@ -18,7 +21,7 @@ export default function Form(props:any)
             <InputForm type="password" placeholder="Password"></InputForm>
             {/*Button */}
             <div className="flex relative justify-center">
-                <Button name={props.name} type="submit"></Button>
+                <Button name={renderText} type="submit"></Button>
             </div>
             {/*The line between the modalities of create an account */}
             <div className="flex mt-5 m-auto justify-center">

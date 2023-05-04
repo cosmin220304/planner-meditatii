@@ -13,7 +13,7 @@ function Topnav() {
   }
 
   return (
-    <div className="text-white [&>*]:bg-blue-500">
+    <div className="text-white [&>*]:bg-sky-500">
       <Navbar>
         <Logo />
         <HamburgerButton toggle={toggle} />

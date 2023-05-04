@@ -13,5 +13,7 @@ function Home() {
       <Description />
       <ExploreSection/>
       <FooterSection/>
-    </di>
+    </div>
+  )
+}
 export default Home;

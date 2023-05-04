@@ -20,7 +20,7 @@ const categories = [
 
 function Description() {
   return (
-    <div className="bg-blue-500 text-white flex gap-4 p-4">
+    <div className="bg-sky-500 text-white flex gap-4 p-12 my-20">
       {categories.map(({ title, description }) => (
         <div
           className="flex flex-col items-center gap-4"

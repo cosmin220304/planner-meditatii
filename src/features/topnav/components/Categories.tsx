@@ -9,7 +9,7 @@ interface Props {
 function Categories({ isToggled }: Props) {
   return (
     <div
-      className={`bg-blue-500 brightness-90 w-full px-4 py-2 ${
+      className={`brightness-90 w-full px-4 py-2 ${
         isToggled ? "flex" : "hidden" // hide on mobile if toggle was not pressed
       } flex-col justify-around md:flex-row md:flex`}
     >

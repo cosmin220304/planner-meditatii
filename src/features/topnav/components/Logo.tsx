@@ -1,7 +1,5 @@
 import { Navbar } from "flowbite-react";
-import LogoSmall from "@assets/LogoWhiteSmall.svg";
-import white_logo from "@assets/images/white-logo.svg";
-
+import white_logo from "@assets/svg/white-logo.svg"
 function Logo() {
   return (
     <Navbar.Brand href="/">
